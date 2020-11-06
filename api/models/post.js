@@ -1,5 +1,5 @@
-const PATH = "./data.json";
 const fs = require("fs");
+const PATH = "./data.json";
 
 class Post {
 	get() {
@@ -28,14 +28,6 @@ class Post {
 	}
 
 	storeData(rawdata) {
-		// let student = {
-		// 			name: "Mike",
-		// 			age: 23,
-		// 			gender: "Male",
-		// 			department: "English",
-		// 			car: "Honda",
-		// 		};
-
 		let data = JSON.stringify(rawdata);
 		fs.writeFileSync(PATH, data);
 	}
